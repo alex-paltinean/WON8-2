@@ -11,10 +11,20 @@ public class RecursionExercises {
 //        printRecursivelyNumbers(10);
 
         //compute sum of all numbers from n to 1
-//        System.out.println(sumRecursivelyNumbers(5));
+        System.out.println(sumRecursivelyNumbers(5));
 
         // fibonacci 1, 1, 2, 3, 5, 8, 13, 21, 34 ...
-        System.out.println(fibonacci(100));
+//        System.out.println(fibonacci(100));
+
+//        System.out.println(sumRecursivelyNumbersAsc(0, 5));
+    }
+
+    private static int sumRecursivelyNumbersAsc(int i, int n) {
+        System.out.println("Adding " + i);
+        if (i == n) {
+            return n;
+        }
+        return i + sumRecursivelyNumbersAsc(i + 1, n);
     }
 
     private static long fibonacci(long n) {
@@ -34,6 +44,7 @@ public class RecursionExercises {
 
     private static int sumRecursivelyNumbers(int n) {
         // exit condition
+        System.out.println("Adding " + n);
         if (n == 1) {
             return 1;
         }
@@ -46,6 +57,7 @@ public class RecursionExercises {
         // n + (n-1) + (n-2) + ... + 2 + sumRecursivelyNumbers(1)
         // n + (n-1) + (n-2) + ... + 2 + 1
     }
+
 
     private static void printRecursivelyNumbers(int n) {
         // exit condition
