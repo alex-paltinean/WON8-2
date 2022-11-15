@@ -14,6 +14,20 @@ public class StreamExercises {
                 new Citizen("Pete", 45, "artist", false)
         );
 
+        // test flow
+
+        citizens.stream()
+                .map(citizen -> {
+                    System.out.println("mapped " + citizen);
+                    return citizen.name();
+                })
+                .sorted()
+                .map(name -> {
+                    System.out.println("mapped " + name);
+                    return name.length();
+                })
+                .toList();
+
         Stream<Citizen> stream = citizens.stream();
 
         List<Citizen> marriedOver30 = citizens.stream()

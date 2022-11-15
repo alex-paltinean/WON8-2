@@ -67,7 +67,7 @@ public class LambdaExpressions {
     }
 
     public static void tryFunction(Function<Integer, Integer> incrementor) {
-        // 100 lines of code
+        // 100 lines of codex
         System.out.println(incrementor.apply(4));
         // 100 lines of code
     }
